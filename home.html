@@ -6,7 +6,8 @@
     <title></title>
     <link rel="stylesheet" href="/css/home.css" />
     <link rel="stylesheet" href="/css/global.css" />
-    <!-- fonts -->
+
+    <!-- Fonts -->
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Agbalumo&display=swap"
@@ -19,8 +20,13 @@
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@800&display=swap"
     />
-    <!-- ikon -->
+
+    <!-- Icons -->
     <script src="https://unpkg.com/feather-icons"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+    />
   </head>
 
   <body>
@@ -30,17 +36,44 @@
 
       <div class="navbar-nav">
         <a href="#home" class="home">Home</a>
-        <a href="#menu3" class="menu">Menu</a>
+        <a href="#food" class="menu">Menu</a>
         <a href="#rekomendasi" class="recomendation">Recommendation</a>
-        <a href="feedback.html" class="feedback">feedback</a>
-        <a href="team.html" class="services">Our Team</a>
+        <a href="#team" class="services">Our Team</a>
       </div>
 
       <div class="navbar-extra">
-        <a href="#" id="shopping-cart"><i data-feather="shopping-cart"></i></a>
+        <a href="#" id="shopping-cart-button"
+          ><i data-feather="shopping-cart"></i
+        ></a>
+        <span class="totalQuantity">0</span>
         <a href="#" id="hamburger-menu"><i data-feather="menu"></i></a>
       </div>
+
+      <div class="shopping-cart">
+        <h3>Keranjang</h3>
+        <div class="wishlist">
+          <div class="item">
+            <img src="img/img-5.png" alt="" />
+            <div class="content">
+              <div class="name">Americano</div>
+              <div class="price">$100</div>
+              <div class="quantity">
+                <button>-</button>
+                <span class="value">5</span>
+                <button>+</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <button class="close-cart-btn" onclick="closeShoppingCart()">
+          <i class="fas fa-times"></i> Close
+        </button>
+        <button class="checkout-btn" onclick="checkout()">
+          <i class="fas fa-shopping-cart"></i> Checkout
+        </button>
+      </div>
     </nav>
+
     <!-- hero -->
     <section class="hero" id="home">
       <main class="content">
@@ -50,264 +83,193 @@
           helps boost your productivity and helps build your mood. Having a cup
           of coffee is good, but having a cup of real coffee is greater.
         </p>
-
-        <div class="button">
-          <a href="" class="shop-now">shop</a>
-        </div>
       </main>
     </section>
 
-    <!-- menu -->
-    <div class="menu3" id="menu3">
-      <div class="enjoy-a-new-blend-of-coffee-st-parent">
-        <div class="enjoy-a-new">Enjoy a new blend of coffee style</div>
-        <div class="explore-all-flavours">
-          Explore all flavours of coffee with us. There is always a new cup
-          worth experiencing
-        </div>
-        <div class="frame-group">
-          <div class="row-menu-parent">
-            <div class="row-menu">
-              <div class="rectangle-parent">
-                <div class="group-child"></div>
-                <img class="group-item" alt="" src="/img/img-5.png" />
-
-                <div class="cappuccino-parent">
-                  <div class="cappuccino">Cappuccino</div>
-                  <div class="coffee-50">Coffee 50% | Milk 50%</div>
-                  <div class="k">43k</div>
-                </div>
-              </div>
-              <div class="button2">
-                <a href="" class="shop-now1">shop now</a>
-              </div>
-            </div>
-            <div class="row-menu">
-              <div class="rectangle-parent">
-                <div class="group-child"></div>
-                <img class="group-item" alt="" src="/img/img-6.png" />
-
-                <div class="cappuccino-parent">
-                  <div class="cappuccino">Chai Latte</div>
-                  <div class="coffee-50">Coffee 50% | Milk 50%</div>
-                  <div class="k">42k</div>
-                </div>
-              </div>
-              <div class="button2">
-                <a href="" class="shop-now1">shop now</a>
-              </div>
-            </div>
-            <div class="row-menu">
-              <div class="rectangle-parent">
-                <div class="group-child"></div>
-                <img class="group-item" alt="" src="/img/img-7.png" />
-
-                <div class="cappuccino-parent">
-                  <div class="cappuccino">Macchiato</div>
-                  <div class="coffee-50">Coffee 50% | Milk 50%</div>
-                  <div class="k">40k</div>
-                </div>
-              </div>
-              <div class="button2">
-                <a href="" class="shop-now1">shop now</a>
-              </div>
-            </div>
-            <div class="row-menu">
-              <div class="rectangle-parent">
-                <div class="group-child"></div>
-                <img class="group-item" alt="" src="/img/img-8.png" />
-
-                <div class="cappuccino-parent">
-                  <div class="cappuccino">Expresso</div>
-                  <div class="coffee-50">Coffee 50% | Milk 50%</div>
-                  <div class="k">38k</div>
-                </div>
-              </div>
-              <div class="button2">
-                <a href="" class="shop-now1">shop now</a>
-              </div>
-            </div>
+    <!-- Foods -->
+    <div class="food-menu" id="food">
+      <div class="heading">
+        <h1>&mdash; MENU &mdash;</h1>
+        <h7
+          >Explore all flavours of coffee with us. There is always a new cup
+          worth experiencing.</h7
+        >
+      </div>
+      <div class="food-items">
+        <img src="img/img-5.png" />
+        <div class="details">
+          <div class="details-sub">
+            <h5>Smoky Hamburger</h5>
+            <h5 class="price">$8</h5>
           </div>
-          <div class="button-shop-all-products">
-            <div class="button-shop-all-products-child"></div>
-            <a href="menu.html" class="shop-all-products"
-              >See More Products &gt;</a
-            >
-          </div>
+          <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit reiciendis
+            nam non quia! Earum eveniet minus. Facilis explicabo natus nihil
+            voluptatem eveniet pariatur.
+          </p>
+          <button><i data-feather="shopping-cart"></i></button>
         </div>
       </div>
     </div>
 
-    <div class="rekomendasi" id="rekomendasi">
-      <div class="section-6">
-        <div class="recommended">recommended</div>
-        <div class="arrows">
-          <img
-            class="material-symbolsarrow-circle-icon"
-            alt=""
-            src="/img/kiri_rk.svg"
-          />
-
-          <img
-            class="material-symbolsarrow-circle-icon1"
-            alt=""
-            src="/img/kanan_rk.svg"
-          />
-        </div>
-        <div class="recommended1">
-          <div class="product1">
-            <img
-              class="rectangle-7-removebg-preview-1-icon"
-              alt=""
-              src="/img/img1_nobg.png"
-            />
-
-            <div class="product1-inner">
-              <div class="frame-div">
-                <div class="macchiato">Cappuccino</div>
-                <img class="frame-item" alt="" src="/img/batas.svg" />
-
-                <div class="dark-roast">dark roast</div>
-              </div>
+    <!-- Rekomendasi -->
+    <div class="heading-feedback" id="rekomendasi">
+      <h1>&mdash; Rekomendasi &mdash;</h1>
+    </div>
+    <div class="wrapper-body">
+      <div class="wrapper">
+        <i id="left" class="fa-solid fa-angle-left"></i>
+        <ul class="carousel">
+          <li class="card">
+            <div class="img">
+              <img src="img/img-5.png" alt="img" draggable="false" />
             </div>
-            <img class="product1-child" alt="" src="/img/cart2.svg" />
-
-            <img class="phinfo-icon" alt="" src="/img/info.svg" />
-          </div>
-          <div class="product1">
-            <img
-              class="rectangle-7-removebg-preview-1-icon"
-              alt=""
-              src="/img/img2_nobg.png"
-            />
-
-            <div class="product1-inner">
-              <div class="frame-div">
-                <div class="macchiato">Macchiato</div>
-                <img class="frame-item" alt="" src="img/batas.svg" />
-
-                <div class="dark-roast">dark roast</div>
-              </div>
+            <h2>Blanche Pearson</h2>
+            <span class="star-1">
+              <i data-feather="star" class="star-full"></i>
+              <i data-feather="star" class="star-full"></i>
+              <i data-feather="star" class="star-full"></i>
+              <i data-feather="star" class="star-full"></i>
+              <i data-feather="star"></i>
+            </span>
+          </li>
+          <li class="card">
+            <div class="img">
+              <img src="img/asin2.jpeg" alt="img" draggable="false" />
             </div>
-            <img class="product1-child" alt="" src="/img/cart2.svg" />
-
-            <img class="phinfo-icon" alt="" src="/img/info.svg" />
-          </div>
-          <div class="product1">
-            <img
-              class="front-view-delicious-cake-with-icon"
-              alt=""
-              src="/img/kue.png"
-            />
-
-            <div class="product1-inner">
-              <div class="frame-div">
-                <div class="macchiato">Chocolate Cake</div>
-                <img class="frame-item" alt="" src="/img/batas.svg" />
-
-                <div class="dark-roast">dark Chocolate</div>
-              </div>
+            <h2>Joenas Brauers</h2>
+            <span class="star-2">
+              <i data-feather="star"></i>
+              <i data-feather="star"></i>
+              <i data-feather="star"></i>
+              <i data-feather="star"></i>
+              <i data-feather="star"></i>
+            </span>
+          </li>
+          <li class="card">
+            <div class="img">
+              <img src="img/seger1.jpeg"img" draggable="false" />
             </div>
-            <img class="product1-child" alt="" src="/img/cart2.svg" />
-
-            <img class="phinfo-icon" alt="" src="/img/info.svg" />
-          </div>
-        </div>
+            <h2>Lariach French</h2>
+            <span class="star-3">
+              <i data-feather="star"></i>
+              <i data-feather="star"></i>
+              <i data-feather="star"></i>
+              <i data-feather="star"></i>
+              <i data-feather="star"></i>
+            </span>
+          </li>
+        </ul>
+        <i id="right" class="fa-solid fa-angle-right"></i>
       </div>
     </div>
 
-    <section class="home4">
-      <div class="splash-coffe" id="ourteam">
-        <img src="/img/coffee_blast.png" alt="" />
-      </div>
-      <div class="splash-coffe2">
-        <img src="/img/coffee_blast (1).png" alt="" />
-      </div>
-      <div class="head-feedback">
-        <div class="head-feedback-content">
-          <h1>Our coffee perfection feedback</h1>
-          <p class="paragraf">Our customers has amazing things to say about us</p>
-          <div class="card4">
-            <div class="picture">
-              <div class="kotak-feedback">
-                <div class="qoute-feedback">
-                  <p class="paragraf2">
-                    "Absolutely impressed with this coffee shop! Their coffee
-                    tastes amazing,
-                    <br />truly delivering rich and deep flavors. The ambiance
-                    here is delightful, <br />perfect for unwinding or getting
-                    work done. <br />The friendly and professional service also
-                    elevates the experience. <br />It’s definitely becoming one
-                    of my favorite spots to enjoy a cup of coffee."
-                  </p>
-                  <h1>Jonny Thomas</h1>
-                  <p>Project Manager</p>
-                </div>
-                <!-- <div class="picture-product-arrow">
-                    <div class="arrow-kiri">
-                      <span class="material-symbols-outlined" style="cursor: pointer;">
-                      arrow_back
-                      </span>
-                    </div>
-                    <div class="arrow-kanan">
-                      <span class="material-symbols-outlined" style="cursor: pointer;">
-                        arrow_forward
-                        </span>
-                      </div> -->
-                <div class="profile-feedback">
-                  <img src="/img/feedback/people.png" alt="" />
-                </div>
-              </div>
-            </div>
-          </div>
+    <!-- Team -->
+    <section class="team" id="team">
+      <h1>&mdash; Team &mdash;</h1>
+      <h7>
+        Explore all the team member with us. We are Team 22 from section
+        Bandung.
+      </h7>
+
+      <div class="row">
+        <div class="menu-card">
+          <img src="/img/vitra.jpeg" alt="Espresso" class="menu-card-img" />
+          <h3 class="menu-card-title">- Vittra Triani -</h3>
+          <p class="menu-card-price">Project Leader</p>
+        </div>
+        <div class="menu-card">
+          <img src="/img/Raissa.jpeg" alt="Espresso" class="menu-card-img" />
+          <h3 class="menu-card-title">- Cristina Raissa Dongoran -</h3>
+          <p class="menu-card-price">Front End Engineer</p>
+        </div>
+        <div class="menu-card">
+          <img src="/img/dila.jpg" alt="Espresso" class="menu-card-img" />
+          <h3 class="menu-card-title">- Nor Dila Aulia -</h3>
+          <p class="menu-card-price">Front End Engineer</p>
+        </div>
+        <div class="menu-card">
+          <img src="/img/gibran.png" alt="Espresso" class="menu-card-img" />
+          <h3 class="menu-card-title">- Ghibran Harta Yudha -</h3>
+          <p class="menu-card-price">Back End Engineer</p>
+        </div>
+        <div class="menu-card">
+          <img src="/img/yassar.jpg" alt="Espresso" class="menu-card-img" />
+          <h3 class="menu-card-title">- Yassar Ghinata -</h3>
+          <p class="menu-card-price">Back End Engineer</p>
+        </div>
+        <div class="menu-card">
+          <img src="/img/widya.JPG" alt="Espresso" class="menu-card-img" />
+          <h3 class="menu-card-title">- Widya Nur Lailiya -</h3>
+          <p class="menu-card-price">Quality Assurance</p>
         </div>
       </div>
     </section>
 
-    <!-- ikon -->
+    <!-- Icons -->
     <script>
       feather.replace();
     </script>
 
-    <!-- javascript -->
+    <!-- JS -->
     <script src="js/home.js"></script>
   </body>
 
+  <!-- footer -->
   <div class="footer">
-    <div class="overlap">
-      <div class="background">
-        <div class="overlap-group">
-          <div class="rectangle"></div>
-        </div>
+    <div class="container">
+      <div class="sec aboutus">
+        <h2>TucOff</h2>
+        <p>
+          TucOff for an exceptional coffee experience. We serve high-quality
+          coffee that not only tantalizes the taste buds but also offers a warm
+          and friendly experience. From unique flavors to an inviting
+          atmosphere, every visit guarantees an unforgettable moment.
+        </p>
+        <ul class="sci">
+          <li>
+            <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+          </li>
+          <li>
+            <a href="#"><i class="fa-brands fa-twitter"></i></a>
+          </li>
+          <li>
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+          </li>
+          <li>
+            <a href="#"><i class="fa-brands fa-youtube"></i></a>
+          </li>
+        </ul>
       </div>
-      <div class="frame">
-        <div class="div">
-          <div class="text-wrapper">Tucoff</div>
-          <p class="lorem-ipsum-is">
-            TucOff for an exceptional coffee experience. We serve high-quality
-            coffee that not only tantalizes the taste buds but also offers a
-            warm and friendly experience. From unique flavors to an inviting
-            atmosphere, every visit guarantees an unforgettable moment.
-          </p>
-          <img class="group" src="img/social-media.svg" />
-        </div>
-        <div class="group-2">
-          <div class="text-wrapper-1">About</div>
-          <a href="#home" class="home-menu-services">Home</a>
-        </div>
-        <div class="group-3">
-          <div class="text-wrapper-2">Company</div>
-          <a href="team.html" class="text-wrapper-3">Our Team</a>
-        </div>
-        <div class="group-4">
-          <div class="text-wrapper-2">Contact Us</div>
-          <div class="group-5">
-            <div class="text-wrapper-4">+1 202-918-2132</div>
-            <div class="text-wrapper-5">tucoff@mail.com</div>
-            <div class="text-wrapper-6">www.tucoff.com</div>
-          </div>
-        </div>
+      <div class="quicklinks">
+        <h2>About</h2>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Menu</a></li>
+          <li><a href="#">Recommendation</a></li>
+        </ul>
+      </div>
+      <div class="quicklinks">
+        <h2>Company</h2>
+        <ul>
+          <li><a href="">Our Team </a></li>
+        </ul>
+      </div>
+      <div class="contact">
+        <h2>Contact Us</h2>
+        <ul class="info">
+          <li>
+            <span><i class="fa-solid fa-phone"></i></span>
+            <p><a href="tel:+1 202-918-2132">+1 202-918-2132</a></p>
+          </li>
+          <li>
+            <span><i class="fa-solid fa-envelope"></i></span>
+            <p><a href="mailto:TucOff@gmail.com">TucOff@gmail.com</a></p>
+          </li>
+        </ul>
       </div>
     </div>
   </div>
+
+  <script src="src/app.js"></script>
 </html>

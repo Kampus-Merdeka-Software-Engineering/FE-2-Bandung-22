@@ -1,0 +1,51 @@
+[
+  {
+    "id": 1,
+    "name": "Dalgona",
+    "price": 10,
+    "image": "img/img-5.png",
+    "description": "Lorem ipsum dolor."
+  },
+  {
+    "id": 2,
+    "name": "Cappucino",
+    "price": 20,
+    "image": "img/img-6.png"
+  },
+  {
+    "id": 3,
+    "name": "Red Velvet Cake",
+    "price": 30,
+    "image": "img/img-7.png"
+  },
+  {
+    "id": 4,
+    "name": "Matcha Cake",
+    "price": 40,
+    "image": "img/img-8.png"
+  },
+  {
+    "id": 5,
+    "name": "Atlantis Blue",
+    "price": 40,
+    "image": "img/seger1.jpeg"
+  },
+  {
+    "id": 6,
+    "name": "Pink Lemonade",
+    "price": 40,
+    "image": "img/seger2.jpeg"
+  },
+  {
+    "id": 7,
+    "name": "Corndog",
+    "price": 40,
+    "image": "img/asin2.jpeg"
+  },
+  {
+    "id": 8,
+    "name": "French fries",
+    "price": 40,
+    "image": "img/asin1.jpeg"
+  }
+]
