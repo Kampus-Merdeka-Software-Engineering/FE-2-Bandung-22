@@ -1,51 +1,58 @@
 [
   {
     "id": 1,
-    "name": "Dalgona",
-    "price": 10,
+    "name": "Dalgona Coffee",
+    "price": 25.0,
     "image": "img/img-5.png",
-    "description": "Lorem ipsum dolor."
+    "description": "Creamy, whipped coffee sensation."
   },
   {
     "id": 2,
     "name": "Cappucino",
-    "price": 20,
-    "image": "img/img-6.png"
+    "price": 25.0,
+    "image": "img/img-6.png",
+    "description": "Espresso-based, milky coffee delight."
   },
   {
     "id": 3,
     "name": "Red Velvet Cake",
-    "price": 30,
-    "image": "img/img-7.png"
+    "price": 30.0,
+    "image": "img/img-7.png",
+    "description": "Velvety, cocoa-infused indulgence."
   },
   {
     "id": 4,
     "name": "Matcha Cake",
     "price": 40,
-    "image": "img/img-8.png"
+    "image": "img/img-8.png",
+    "description": "Rich, earthy, green tea indulgence."
   },
   {
     "id": 5,
     "name": "Atlantis Blue",
     "price": 40,
-    "image": "img/seger1.jpeg"
+    "image": "img/seger1.jpeg",
+    "description": "Refreshing, blue, citrusy delight."
   },
   {
     "id": 6,
     "name": "Pink Lemonade",
     "price": 40,
-    "image": "img/seger2.jpeg"
+    "image": "img/seger2.jpeg",
+    "description": "Tart, sweet, refreshing pink delight."
   },
   {
     "id": 7,
     "name": "Corndog",
     "price": 40,
-    "image": "img/asin2.jpeg"
+    "image": "img/asin2.jpeg",
+    "description": "Crispy, cheesy Korean treat on a stick."
   },
   {
     "id": 8,
     "name": "French fries",
     "price": 40,
-    "image": "img/asin1.jpeg"
+    "image": "img/asin1.jpeg",
+    "description": "Golden, crispy, salty potato delight."
   }
 ]

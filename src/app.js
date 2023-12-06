@@ -22,7 +22,7 @@ function addDataToHTML() {
   // Template for the menu heading
   const menuHeadingTemplate = `
     <div class="heading">
-      <h1>&mdash; MENU &mdash;</h1>
+      <h1>&mdash; Menu &mdash;</h1>
       <h7>Explore all flavors of coffee with us. There is always a new cup worth experiencing.</h7>
     </div>
   `;
@@ -47,11 +47,10 @@ function createProductElement(product) {
     <div class="details">
       <div class="details-sub">
         <h5>${product.name}</h5>
-        <h5 class="price">$${product.price}</h5>
+        <h5 class="price">${product.price}k</h5>
       </div>
       <p>${product.description}</p>
-      <button onclick="addCart(${product.id})">Add to Cart
-      </button>
+      <button onclick="addCart(${product.id})">Add to Cart</button>
     </div>
   `;
   return newProduct;
@@ -120,7 +119,7 @@ function addCartToHTML() {
           <img src="${product.image}" alt="${product.name}" />
           <div class="content">
             <div class="name">${product.name}</div>
-            <div class="price">$${product.price * product.quantity}</div>
+            <div class="price">${product.price * product.quantity}</div>
             <div class="quantity">
               <button onclick="removeItem(${product.id})" class="btn">-</button>
               <span class="value">${product.quantity}</span>
@@ -143,7 +142,7 @@ function addCartToHTML() {
   totalHTML.textContent = totalQuantity;
 
   const totalPriceHTML = document.querySelector(".totalPrice");
-  totalPriceHTML.textContent = `$${totalPrice}`;
+  totalPriceHTML.textContent = `${totalPrice}`;
 }
 
 // Function to remove one quantity of an item from the wishlist

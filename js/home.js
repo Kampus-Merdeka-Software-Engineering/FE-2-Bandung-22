@@ -76,11 +76,33 @@ function closeShoppingCart() {
   shoppingCart.classList.remove("active");
 }
 
+// function checkout() {
+//   // Add your checkout logic here
+//   alert("Checkout logic goes here!");
+//   // You can redirect to a checkout page or perform other checkout actions
+// }
+
 function checkout() {
-  // Add your checkout logic here
-  alert("Checkout logic goes here!");
-  // You can redirect to a checkout page or perform other checkout actions
+  // Using confirmation alert from SweetAlert2 with additional information
+  Swal.fire({
+    title: "Are you sure?",
+    text: 'Click "Yes, Checkout!" to proceed to payment process.',
+    icon: "warning",
+    showCancelButton: true,
+    confirmButtonText: "Yes, Checkout!",
+    cancelButtonText: "Cancel",
+  }).then((result) => {
+    if (result.isConfirmed) {
+      // Display additional information before the checkout logic
+    } else {
+      // Other actions if the user cancels
+      Swal.fire("Checkout canceled", "", "info");
+    }
+  });
 }
+
+// Attach the checkout function to the button click event
+document.getElementById("checkoutButton").addEventListener("click", checkout);
 
 const wrapper = document.querySelector(".wrapper");
 const carousel = document.querySelector(".carousel");

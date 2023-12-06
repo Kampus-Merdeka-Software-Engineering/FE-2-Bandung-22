@@ -4,8 +4,18 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title></title>
-    <link rel="stylesheet" href="/css/home.css" />
+    <link rel="stylesheet" href="/css/style.css" />
     <link rel="stylesheet" href="/css/global.css" />
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css"
+    />
 
     <!-- Fonts -->
     <link
@@ -89,7 +99,7 @@
     <!-- Foods -->
     <div class="food-menu" id="food">
       <div class="heading">
-        <h1>&mdash; MENU &mdash;</h1>
+        <h1>&mdash; Menu &mdash;</h1>
         <h7
           >Explore all flavours of coffee with us. There is always a new cup
           worth experiencing.</h7
@@ -114,7 +124,7 @@
 
     <!-- Rekomendasi -->
     <div class="heading-feedback" id="rekomendasi">
-      <h1>&mdash; Rekomendasi &mdash;</h1>
+      <h1>&mdash; Recommendation &mdash;</h1>
     </div>
     <div class="wrapper-body">
       <div class="wrapper">
@@ -124,7 +134,7 @@
             <div class="img">
               <img src="img/img-5.png" alt="img" draggable="false" />
             </div>
-            <h2>Blanche Pearson</h2>
+            <h2>Dalgona Coffee</h2>
             <span class="star-1">
               <i data-feather="star" class="star-full"></i>
               <i data-feather="star" class="star-full"></i>
@@ -137,12 +147,25 @@
             <div class="img">
               <img src="img/asin2.jpeg" alt="img" draggable="false" />
             </div>
-            <h2>Joenas Brauers</h2>
+            <h2>Corndog</h2>
             <span class="star-2">
-              <i data-feather="star"></i>
-              <i data-feather="star"></i>
-              <i data-feather="star"></i>
-              <i data-feather="star"></i>
+              <i data-feather="star" class="star-full"></i>
+              <i data-feather="star" class="star-full"></i>
+              <i data-feather="star" class="star-full"></i>
+              <i data-feather="star" class="star-full"></i>
+              <i data-feather="star" class="star-full"></i>
+            </span>
+          </li>
+          <li class="card">
+            <div class="img">
+              <img src="img/img-7.png"img" draggable="false" />
+            </div>
+            <h2>Lariach French</h2>
+            <span class="star-4">
+              <i data-feather="star" class="star-full"></i>
+              <i data-feather="star" class="star-full"></i>
+              <i data-feather="star" class="star-full"></i>
+              <i data-feather="star" class="star-full"></i>
               <i data-feather="star"></i>
             </span>
           </li>
@@ -150,13 +173,13 @@
             <div class="img">
               <img src="img/seger1.jpeg"img" draggable="false" />
             </div>
-            <h2>Lariach French</h2>
+            <h2>Atlantic Blue</h2>
             <span class="star-3">
-              <i data-feather="star"></i>
-              <i data-feather="star"></i>
-              <i data-feather="star"></i>
-              <i data-feather="star"></i>
-              <i data-feather="star"></i>
+              <i data-feather="star" class="star-full"></i>
+              <i data-feather="star" class="star-full"></i>
+              <i data-feather="star" class="star-full"></i>
+              <i data-feather="star" class="star-full"></i>
+              <i data-feather="star" class="star-full"></i>
             </span>
           </li>
         </ul>
@@ -200,7 +223,7 @@
         </div>
         <div class="menu-card">
           <img src="/img/widya.JPG" alt="Espresso" class="menu-card-img" />
-          <h3 class="menu-card-title">- Widya Nur Lailiya -</h3>
+          <h3 class="menu-card-title">- Widya Nuri Lailiya -</h3>
           <p class="menu-card-price">Quality Assurance</p>
         </div>
       </div>
@@ -215,61 +238,57 @@
     <script src="js/home.js"></script>
   </body>
 
-  <!-- footer -->
-  <div class="footer">
-    <div class="container">
-      <div class="sec aboutus">
-        <h2>TucOff</h2>
-        <p>
-          TucOff for an exceptional coffee experience. We serve high-quality
-          coffee that not only tantalizes the taste buds but also offers a warm
-          and friendly experience. From unique flavors to an inviting
-          atmosphere, every visit guarantees an unforgettable moment.
-        </p>
-        <ul class="sci">
-          <li>
-            <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
-          </li>
-          <li>
-            <a href="#"><i class="fa-brands fa-twitter"></i></a>
-          </li>
-          <li>
-            <a href="#"><i class="fa-brands fa-instagram"></i></a>
-          </li>
-          <li>
-            <a href="#"><i class="fa-brands fa-youtube"></i></a>
-          </li>
-        </ul>
+  <div class="body-footer">
+    <footer class="footer section bd-container">
+      <div class="footer__container bd-grid">
+        <div class="footer__content">
+          <a href="#" class="footer__logo">TucOff</a>
+          <span class="footer__description"></span>
+          <div>
+            <a href="#" class="footer__social"
+              ><i class="bx bxl-facebook"></i
+            ></a>
+            <a href="#" class="footer__social"
+              ><i class="bx bxl-instagram"></i
+            ></a>
+            <a href="#" class="footer__social"
+              ><i class="bx bxl-twitter"></i
+            ></a>
+          </div>
+        </div>
+
+        <div class="footer__content">
+          <h3 class="footer__title">About</h3>
+          <ul>
+            <li><a href="#" class="footer__link">Home</a></li>
+            <li><a href="#" class="footer__link">Menu</a></li>
+            <li><a href="#" class="footer__link">services</a></li>
+          </ul>
+        </div>
+
+        <div class="footer__content">
+          <h3 class="footer__title">Company</h3>
+          <ul>
+            <li><a href="#" class="footer__link">Our team</a></li>
+          </ul>
+        </div>
+
+        <div class="footer__content">
+          <h3 class="footer__title">Contact Us</h3>
+          <ul>
+            <li>Indonesia</li>
+            <li>+1 202-918-2132</li>
+            <li>TucOff@gmail.com</li>
+            <li>www.TucOff.com</li>
+          </ul>
+        </div>
       </div>
-      <div class="quicklinks">
-        <h2>About</h2>
-        <ul>
-          <li><a href="#">Home</a></li>
-          <li><a href="#">Menu</a></li>
-          <li><a href="#">Recommendation</a></li>
-        </ul>
-      </div>
-      <div class="quicklinks">
-        <h2>Company</h2>
-        <ul>
-          <li><a href="">Our Team </a></li>
-        </ul>
-      </div>
-      <div class="contact">
-        <h2>Contact Us</h2>
-        <ul class="info">
-          <li>
-            <span><i class="fa-solid fa-phone"></i></span>
-            <p><a href="tel:+1 202-918-2132">+1 202-918-2132</a></p>
-          </li>
-          <li>
-            <span><i class="fa-solid fa-envelope"></i></span>
-            <p><a href="mailto:TucOff@gmail.com">TucOff@gmail.com</a></p>
-          </li>
-        </ul>
-      </div>
-    </div>
+
+      <p class="footer__copy">&#169; 2023 22-Bandung. All right reserved</p>
+    </footer>
   </div>
 
   <script src="src/app.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.all.min.js"></script>
 </html>
