@@ -609,7 +609,7 @@ body {
   transition: background-color 0.5s;
 }
 
-.shopping-cart .checkout-btn {
+.shopping-cart #checkoutButton {
   padding: 8px 16px;
   margin: 5px;
   cursor: pointer;
@@ -802,6 +802,6 @@ ul {
 /* For tall screens on mobiles y desktop*/
 @media screen and (min-height: 721px) {
   .home__container {
-    height: 640px;
-  }
+    height: 640px;
+  }
 }

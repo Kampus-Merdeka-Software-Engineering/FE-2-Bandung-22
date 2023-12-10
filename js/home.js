@@ -1,5 +1,7 @@
 // const navbarNav = document.querySelector(".navbar-nav");
 
+// import { fetchProducts } from "../src/app";
+
 // document.querySelector("#hamburger-menu").onclick = () => {
 //   navbarNav.classList.toggle("active");
 // };
@@ -62,11 +64,27 @@ shoppingCart.addEventListener("click", function (e) {
   e.stopPropagation(); // Prevent the click event from reaching the document
 });
 
+const hm = document.getElementById("hm");
+const sc = document.getElementById("sc");
+
 document.addEventListener("click", function (e) {
-  if (!hm.contains(e.target) && !navbarNav.contains(e.target)) {
+  // Check if hm exists and e.target is not within the "hm" element and not within the "navbarNav" element
+  if (
+    hm &&
+    !hm.contains(e.target) &&
+    navbarNav &&
+    !navbarNav.contains(e.target)
+  ) {
     navbarNav.classList.remove("active");
   }
-  if (!sc.contains(e.target) && !shoppingCart.contains(e.target)) {
+
+  // Check if sc exists and e.target is not within the "sc" element and not within the "shoppingCart" element
+  if (
+    sc &&
+    !sc.contains(e.target) &&
+    shoppingCart &&
+    !shoppingCart.contains(e.target)
+  ) {
     shoppingCart.classList.remove("active");
   }
 });
@@ -94,6 +112,25 @@ function checkout() {
   }).then((result) => {
     if (result.isConfirmed) {
       // Display additional information before the checkout logic
+      Swal.fire({
+        title: "Choose an option",
+        icon: "question",
+        showCancelButton: true,
+        confirmButtonText: "Dine-In",
+        cancelButtonText: "Takeaway",
+      }).then((optionResult) => {
+        if (optionResult.isConfirmed) {
+          // Logic for Dine-In
+          Swal.fire("Dine-In selected", "", "success");
+          // Redirect to Dine-In page
+          window.location.href = "dinein.html";
+        } else if (optionResult.dismiss === Swal.DismissReason.cancel) {
+          // Logic for Takeaway
+          Swal.fire("Takeaway selected", "", "success");
+          // Redirect to Takeaway page
+          window.location.href = "takeaway.html";
+        }
+      });
     } else {
       // Other actions if the user cancels
       Swal.fire("Checkout canceled", "", "info");
@@ -198,3 +235,8 @@ document.addEventListener("mouseup", dragStop);
 carousel.addEventListener("scroll", infiniteScroll);
 wrapper.addEventListener("mouseenter", () => clearTimeout(timeoutId));
 wrapper.addEventListener("mouseleave", autoPlay);
+document.addEventListener("DOMContentLoaded", () => {
+  if (window.location.pathname === "/index.html") {
+    // fetchProducts();
+  }
+});
