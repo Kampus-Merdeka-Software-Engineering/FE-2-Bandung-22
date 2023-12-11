@@ -1351,6 +1351,7 @@ details summary::-webkit-details-marker {
   list-style: none;
   padding: 6px 16px;
   position: relative;
+  margin-top: 10px;
   transition: background-color 0.2s cubic-bezier(0.3, 0, 0.5, 1);
   user-select: none;
   -webkit-user-select: none;
@@ -1389,4 +1390,8 @@ details summary::-webkit-details-marker {
 
 .button-4:-webkit-details-marker {
   display: none;
+}
+
+form a {
+  text-decoration: none;
 }

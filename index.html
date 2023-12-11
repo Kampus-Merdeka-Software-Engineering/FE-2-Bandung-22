@@ -64,9 +64,9 @@
               <div class="name">Americano</div>
               <div class="price">$100</div>
               <div class="quantity">
-                <button>-</button>
+                <button class="btn">-</button>
                 <span class="value">5</span>
-                <button>+</button>
+                <button class="btn">+</button>
               </div>
             </div>
           </div>
@@ -93,11 +93,12 @@
     </section>
 
     <!-- Foods -->
+    <!-- Foods -->
     <div class="food-menu" id="food">
       <div class="heading">
         <h1>&mdash; Menu &mdash;</h1>
         <h7
-          >Explore all flavours of coffee with us. There is always a new cup
+          >Explore all flavors of coffee with us. There is always a new cup
           worth experiencing.</h7
         >
       </div>
@@ -113,7 +114,7 @@
             nam non quia! Earum eveniet minus. Facilis explicabo natus nihil
             voluptatem eveniet pariatur.
           </p>
-          <button><i data-feather="shopping-cart"></i></button>
+          <button onclick="addCart(1)">Add to Cart</button>
         </div>
       </div>
     </div>
@@ -285,4 +286,5 @@
   </div>
 
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.all.min.js"></script>
+  <script src="/js/API.js"></script>
 </html>

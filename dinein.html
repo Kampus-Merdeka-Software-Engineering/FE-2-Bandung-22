@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>Forms</title>
+    <title>Dine in</title>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css"
@@ -16,35 +16,27 @@
       <main class="demo-page-content">
         <section>
           <div class="href-target" id="installation"></div>
-          <h1>
-              <path
-                d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"
-              />
-            </svg>
-            Dine in
-          </h1>
+          <h1>Dine in</h1>
           <form action="" method="post">
             <div class="nice-form-group">
-              <label>table_number</label>
+              <label>Table Number</label>
               <input
                 type="text"
-                placeholder="table_number"
+                placeholder="Table Number"
                 name="table_number"
                 id="table_number"
                 value=""
-                required
               />
             </div>
 
             <div class="nice-form-group">
-              <label>name</label>
+              <label>Name</label>
               <input
                 type="text"
                 placeholder="Name"
                 name="name"
                 id="name"
                 value=""
-                required
               />
             </div>
 
@@ -56,7 +48,6 @@
                 name="phone"
                 id="phone"
                 value=""
-                required
               />
             </div>
 
@@ -67,5 +58,27 @@
       </main>
     </div>
     <!-- partial -->
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        // Handle form submission
+        document
+          .querySelector("form")
+          .addEventListener("submit", function (event) {
+            event.preventDefault(); // Prevent the form from submitting traditionally
+
+            // Add your form validation logic here if needed
+
+            // Show SweetAlert2 alert
+            Swal.fire({
+              title: "Pemesanan Berhasil!",
+              text: "Pemesanan Anda telah berhasil. Silakan menuju kasir dan sebutkan nama pemesan.",
+              icon: "success",
+              confirmButtonText: "OK",
+            });
+          });
+      });
+    </script>
   </body>
 </html>

@@ -44,7 +44,6 @@
                 name="name"
                 id="name"
                 value=""
-                required
               />
             </div>
 
@@ -56,7 +55,6 @@
                 name="price"
                 id="price"
                 value=""
-                required
               />
             </div>
 
@@ -67,7 +65,6 @@
                 placeholder="Your message"
                 name="description"
                 id="description"
-                required
               ></textarea>
             </div>
 
@@ -79,13 +76,12 @@
                 name="stock"
                 id="stock"
                 value=""
-                required
               />
             </div>
 
             <div class="nice-form-group">
               <label>Photo</label>
-              <input type="file" name="photo" id="photo" required />
+              <input type="file" name="photo" id="photo" />
             </div>
             <div id="image-preview"></div>
 
@@ -95,6 +91,29 @@
         </section>
       </main>
     </div>
+    <script src="./js/API.js"></script>
     <!-- partial -->
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        // Handle form submission
+        document
+          .querySelector("form")
+          .addEventListener("submit", function (event) {
+            event.preventDefault(); // Prevent the form from submitting traditionally
+
+            // Add your form validation logic here if needed
+
+            // Show SweetAlert2 alert
+            Swal.fire({
+              title: "Success!",
+              text: "Your form has been submitted successfully.",
+              icon: "success",
+              confirmButtonText: "OK",
+            });
+          });
+      });
+    </script>
   </body>
 </html>

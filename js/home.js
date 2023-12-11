@@ -1,37 +1,3 @@
-// const navbarNav = document.querySelector(".navbar-nav");
-
-// import { fetchProducts } from "../src/app";
-
-// document.querySelector("#hamburger-menu").onclick = () => {
-//   navbarNav.classList.toggle("active");
-// };
-
-// const hamburger = document.querySelector("#hamburger-menu");
-
-// document.addEventListener("click", function (e) {
-//   if (!hamburger.contains(e.target) && !navbarNav.contains(e.target)) {
-//     navbarNav.classList.remove("active");
-//   }
-// });
-
-// const shoppingCart = document.querySelector(".shopping-cart");
-// document.querySelector("#shopping-cart-button").onclick = (e) => {
-//   shoppingCart.classList.toggle("active");
-//   e.preventDefault();
-// };
-
-// const hm = document.querySelector("#hamburger-menu");
-// const sc = document.querySelector("#shopping-cart-button");
-
-// document.addEventListener("click", function (e) {
-//   if (!hm.contains(e.target) && !navbarNav.contains(e.target)) {
-//     navbarNav.classList.remove("active");
-//   }
-//   if (!sc.contains(e.target) && !shoppingCart.contains(e.target)) {
-//     shoppingCart.classList.remove("active");
-//   }
-// });
-
 const navbarNav = document.querySelector(".navbar-nav");
 const hamburger = document.querySelector("#hamburger-menu");
 const shoppingCart = document.querySelector(".shopping-cart");
